@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PKI MM Extensions catalog manifest",
+  "version": "1.0.0",
+  "type": "object",
+  "required": ["catalogVersion", "extensions"],
+  "additionalProperties": false,
+  "properties": {
+    "catalogVersion": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+    "extensions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "version", "status", "compatibility", "documentation", "definition", "summary"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" },
+          "name": { "type": "string" },
+          "version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+          "status": { "type": "string", "enum": ["under-development", "release-candidate", "stable", "deprecated"] },
+          "compatibility": {
+            "type": "array", "minItems": 1,
+            "items": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" }
+          },
+          "documentation": { "type": "string", "pattern": "^https://" },
+          "definition": { "type": "string", "pattern": "^[a-z0-9][a-z0-9/_-]*\\.yaml$" },
+          "summary": { "type": "string" }
+        }
+      }
+    }
+  }
+}
