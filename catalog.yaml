@@ -1,0 +1,10 @@
+catalogVersion: 1.0.0
+extensions:
+  - id: pqc
+    name: PQC Readiness Extension
+    version: 0.2.0
+    status: under-development
+    compatibility: ["2.0.0"]
+    documentation: https://pkic.org/wg/pkimm/extensions/pqc/
+    definition: pqc/pqc-extension.yaml
+    summary: Adds Post-Quantum Cryptography readiness criteria and weight overlays to evaluate strategic, policy, compliance, and operational preparedness for a quantum-safe PKI transition.
