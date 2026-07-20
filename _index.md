@@ -11,4 +11,4 @@ Official catalog of extensions to the PKI Maturity Model. Extensions add optiona
 
 | Extension | Version | Status | Compatibility | Definition | Summary |
 |---|---|---|---|---|---|
-| [PQC Readiness Extension](https://pkic.org/wg/pkimm/extensions/pqc/) | 0.2.0 | Under development | 2.0.0 | [YAML](./pqc/pqc-extension.yaml) | Adds Post-Quantum Cryptography readiness criteria and weight overlays to evaluate strategic, policy, compliance, and operational preparedness for a quantum-safe PKI transition. |
+| [PQC Readiness Extension](./pqc/) | 0.2.0 | Under development | 2.0.0 | [YAML](./pqc/pqc-extension.yaml) | Adds Post-Quantum Cryptography readiness criteria and weight overlays to evaluate strategic, policy, compliance, and operational preparedness for a quantum-safe PKI transition. |
