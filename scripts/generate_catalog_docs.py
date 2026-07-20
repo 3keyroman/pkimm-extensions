@@ -50,7 +50,7 @@ def render_catalog_table(catalog: dict[str, Any], existing_date: str | None = No
     for e in catalog.get("extensions", []):
         badge = STATUS_BADGE.get(e["status"], e["status"])
         compat = ", ".join(e.get("compatibility", []))
-        lines.append(f"| [{_flatten(e['name'])}]({e['documentation']}) | {e['version']} | {badge} | {compat} | [YAML](./{e['definition']}) | {_flatten(e['summary'])} |")
+        lines.append(f"| [{_flatten(e['name'])}](./{e['id']}/) | {e['version']} | {badge} | {compat} | [YAML](./{e['definition']}) | {_flatten(e['summary'])} |")
     lines.append("")
     return "\n".join(lines)
 
